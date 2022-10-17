@@ -22,33 +22,17 @@
 3. ???
 '''
 
-menustep = '''1. 주먹으로 때린다
-2. 발로 찬다
-3. 머리로 박는다
-4. 도구를 쓴'''
-
-menustep2 = '''1. 어떤도구
-2. ?? 도구
-3. ???'''
-
-
+import gamemod
 print('도라에몽이 길을가다가 몬스터를 만남')
 print('1. 싸운다 2. 도망간다')
 num = input("선택: ")
 # 만약에 1번이면 싸운다 출력
 if num == '1':
-    print(f'당신의 선택은 {num}번 싸움이 시작됩니다')
-    print(menustep)
-    num = input("선택: ")
-    if num == '1':
-        print("몬스터가 데미지를 입었다 또는 피했다")
-    elif num == '2':
-        print("발로차 소농민 골~")
-    elif num == '4':
-        print(menustep2)
-
+    print(f'당신의 선택은 {num}번')
+    gamemod.step1()
 # 만약에 2번이면 도망간다 출력
 elif num == '2':
-    print(f'당신의 선택은 {num}번 도망간다')
+    print(f'당신의 선택은 {num}번')
+    gamemod.step2()
 else:
     print("숫자를 똑바로 누르세요")
