@@ -36,3 +36,5 @@ elif num == '2':
     gamemod.step2()
 else:
     print("숫자를 똑바로 누르세요")
+
+    print("마지막 입니다 잘못 입력시 게임오버!")
