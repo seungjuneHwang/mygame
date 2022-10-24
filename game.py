@@ -24,17 +24,21 @@
 
 import gamemod
 print('도라에몽이 길을가다가 몬스터를 만남')
-print('1. 싸운다 2. 도망간다')
-num = input("선택: ")
-# 만약에 1번이면 싸운다 출력
-if num == '1':
-    print(f'당신의 선택은 {num}번')
-    gamemod.step1()
-# 만약에 2번이면 도망간다 출력
-elif num == '2':
-    print(f'당신의 선택은 {num}번')
-    gamemod.step2()
-else:
-    print("숫자를 똑바로 누르세요")
-
-    print("마지막 입니다 잘못 입력시 게임오버!")
+# 여기서 부터 반복을 하면 될 것 같은데
+for i in range(3):
+    print('1. 싸운다 2. 도망간다')
+    num = input("선택: ")
+    # 만약에 1번이면 싸운다 출력
+    if num == '1':
+        print(f'당신의 선택은 {num}번')
+        gamemod.step1()
+    # 만약에 2번이면 도망간다 출력
+    elif num == '2':
+        print(f'당신의 선택은 {num}번')
+        gamemod.step2()
+    else:
+        print("숫자를 똑바로 누르세요")
+        if i == 1:
+            print("마지막 입니다 잘못 입력시 게임오버!")
+# 여기 까지 반복
+print("게임오버")
